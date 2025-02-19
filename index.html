@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mysical Honor</title>
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="https://www.mysicalhonor.my.id"><img class="desktop_navbar_logo_img" src="media/logo.png" alt="logo"></a>
+      <a href="#" class="desktop_navbar_link">Store</a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#more" class="desktop_navbar_link scroll">Minigames</a>
+      <a href="#about" class="desktop_navbar_link scroll">About Us</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="https://www.mysicalhonor.my.id" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://wiki.example.com/">Wiki</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="https://www.mysicalhonor.my.id">
+          <img class="main1_logo" src="media/logo_small.png" alt="logo">
+        </a>
+        <div class="main1_description">
+          <a>Pengalaman<br>Minecraft</a>
+          <a class="main1_actcent">server terbaru!</a>
+        </div>
+        <div class="main1_ipcopier_div">
+        <button class="main1_ipcopier" id="popupButton" type="button">
+          <span class="main1_ipcopier_text1">Bergabung Sekarang</span>
+        </button>
+        </div>
+        
+
+<div id="popupBox" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h1>Mysical Honor</h1>
+      <p class="separator"></p>
+      <button id="myButton" onclick="location.href='minecraft:?addExternalServer=Mysical Honor|mysicalhonor.my.id:25565'">Buka Minecraft</button>
+      <p style="text-align: left;">atau sambungkan dengan:</p>
+      <p style="text-align: left;">Alamat Server (IP)</p>
+      <input type="text" id="textInput" value="mysicalhonor.my.id" readonly>
+      <br>
+      <p style="text-align: left;">Port Server</p>
+      <input type="text" id="textInput" value="25565" readonly>
+      <p class="separator"></p>
+    </div>
+  </div>
+  
+
+<script>
+document.getElementById('popupButton').addEventListener('click', function() {
+  document.getElementById('popupBox').style.display = 'block';
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+  document.getElementById('popupBox').style.display = 'none';
+});
+</script>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">Apa yang kami miliki?</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/ob.jpg">
+            <a class="main2_feature_headline">PVP SENJATA LEGENDS</a>
+            <a class="main2_feature_text">adalah minigame bertujuan untuk membunuh dan menjadi nomer satu dengan senjata custom yang memukau</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/comings.jpg">
+            <a class="main2_feature_headline">Coming Soon</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/comings.jpg">
+            <a class="main2_feature_headline">Coming Soon</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/comings.jpg">
+            <a class="main2_feature_headline">Coming Soon</a>
+            <a class="main2_feature_text"></a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/comings.jpg">
+            <a class="main2_feature_headline">Coming Soon</a>
+            <a class="main2_feature_text"></a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Gabung Komunitas Kami</a>
+        <div class="main4_dc_div">
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Berkomunikasi Tentang</a>
+            <a class="main4_dc_description"> ・Bertemu player lain <br> ・Bertanya <br> ・Mendapatkan notifikasi update <br> ・Memberikan masukan <br> ・Melaporkan bug <br><br> &amp; more <br><br></a>
+            <a href="https://chat.whatsapp.com/DrdSBhAyKBfGlHr6UGXae3" class="main4_dc_button_a">
+              <div class="main4_dc_button">Whatsapp</div>
+            </a>
+            <a href="https://discord.gg/yS9Auf98" class="main4_wa_button_a">
+              <div class="main4_wa_button">Discord</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Who we are</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="media/owner_placeholder.webp">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title" href="https://example.com">LuzivertOklama</a>
+              <a class="main5_admins_description">Owner<br>Saya adalah owner sekaligus founder server ini, salam kenal ya!</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="media/adminb_placeholder.webp">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title" href="https://example.com">BimasGaming</a>
+              <a class="main5_admins_description">Admin<br>Saya adalah dev sekaligus admin, salam kenal ya!</a>
+            </div>
+          </div>
+        </div>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/mel_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Admin]</a>
+              <a class="main5_supporters_description_title">Meluuu</a>
+              <a class="main5_supporters_description">Admin<br>Saya adalah dev sekaligus admin, salam kenal ya!</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/fn_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Admin]</a>
+              <a class="main5_supporters_description_title">Fanz</a>
+              <a class="main5_supporters_description">Admin<br>Saya membantu perkembangan server, salam kenal ya!</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/jono_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Staff]</a>
+              <a class="main5_supporters_description_title">Jonsut</a>
+              <a class="main5_supporters_description">Staff<br>Saya membantu perkembangan server, salam kenal ya!</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="media/member_placeholder.webp">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Staff]</a>
+              <a class="main5_supporters_description_title">MSUCRP</a>
+              <a class="main5_supporters_description">Staff<br>Saya membantu perkembangan server, salam kenal ya!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">Minecraft Support</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+                <a>Ver:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>mysicalhonor.my.id</a>
+                <a>25565</a>
+                <a>1.18 - Latest</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+                <a>Ver:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>Next Update</a>
+                <a>Next Update</a>
+                <a>1.20 - Latest</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright_div">
+      <a href="https://github.com/FQQD/MCServer-Web-Template" class="copyright">Copyright © 2024 Freedom Network. All rights reserved. All trademarks are property of their respective owners.</a>
+    </footer>
+  </body>
+</html>
